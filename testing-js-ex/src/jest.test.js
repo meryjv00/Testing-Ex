@@ -31,3 +31,24 @@ test('TDD: Si se adquieren 5 libros, se aplica 25% de descuento', () => {
     gestionLibros.adquirirLibros(5);
     expect(gestionLibros.getDescuento()).toBe(25);
 });
+
+test('TDD: Si se adquieren 2 libros, el descuento obtenido es del 5%', () => {
+    //Arr
+    gestionLibros = new GestionLibros();
+    gestionLibros.adquirirLibros(2);
+    var descuento = gestionLibros.getDescuento();
+    expect(descuento).toBe(5);
+
+    libro1 = new Libro();
+    expect(libro1.getPrecio()).toBe(8);
+    libro2 = new Libro();
+    expect(libro2.getPrecio()).toBe(8);
+
+    //Act
+    gestionLibros.aplicarDescuento(descuento, 2);
+
+    //Assert
+    expect(gestionLibros.obtenerDescuento()).toBeCloseTo(7.20);
+
+});
+
