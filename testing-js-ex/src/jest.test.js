@@ -24,3 +24,10 @@ test('TDD: Si se adquieren 4 libros, se aplica 20% de descuento', () => {
     gestionLibros.adquirirLibros(4);
     expect(gestionLibros.getDescuento()).toBe(20);
 });
+
+
+test('TDD: Si se adquieren 5 libros, se aplica 25% de descuento', () => {
+    gestionLibros = new GestionLibros();
+    gestionLibros.adquirirLibros(5);
+    expect(gestionLibros.getDescuento()).toBe(25);
+});
