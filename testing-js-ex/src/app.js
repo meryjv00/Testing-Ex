@@ -6,6 +6,8 @@ module.exports = class GestionLibros {
     adquirirLibros(cantidad){
         if(cantidad == 2){
             this.descuento = 5;
+        }else if(cantidad == 3){
+            this.descuento = 10;
         }
     }
     getDescuento(){
