@@ -1,0 +1,24 @@
+{
+  "name": "testing-js-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:coverage-all": "jest --coverage --watchAll",
+    "test:watch": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3"
+  }
+}
